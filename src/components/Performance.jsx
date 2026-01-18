@@ -30,8 +30,6 @@ function Performance() {
  
 
   if(isMobile)return
- 
-  
     const tl = gsap.timeline({
         defaults:{ease:'power1.inOut', duration:1, overwrite:'auto'},
         scrollTrigger:{

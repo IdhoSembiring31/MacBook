@@ -61,6 +61,7 @@ function ModelSwitcher({ scale, isMobile }) {
           <MacbookModel16 scale={isMobile ? 0.05 : 0.08} />
         </group>
       </PresentationControls>
+      
       <PresentationControls {...controlconfing}>
       <group ref={smallMacbookRef}>
         <MacbookModel14 scale={isMobile ? 0.03 : 0.06}/>

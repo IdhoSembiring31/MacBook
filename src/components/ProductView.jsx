@@ -37,6 +37,8 @@ function ProductView() {
                 color === "#2e2c2e" && "active"
               )}
             />
+
+            
           </div>
 
           <div className="size-control">
