@@ -6,7 +6,7 @@ function SpotLightSetup() {
   return (
     <group name="lights">
       {/* Environment tetap bagus untuk ambient + reflection */}
-      <Environment resolution={256}>
+      <Environment resolution={500}>
         <group>
           <Lightformer
             form="rect"

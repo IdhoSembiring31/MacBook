@@ -1,8 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Box } from "@react-three/drei";
-import { MeshStandardMaterial } from "three";
+import { OrbitControls } from "@react-three/drei";
 import SpotLightSetup from "./Three/SpotLightSetup.jsx";
 import useMacbookStore from "../Store/index.js";
 import { MacbookModel14 } from "./models/Macbook-14.jsx";
@@ -12,7 +11,7 @@ import { useMediaQuery } from "react-responsive";
 
 function ProductView() {
   const { color, setColor, scale, setScale } = useMacbookStore();
-  const isMobile = useMediaQuery({query: '(max-width:1024px'})
+  const isMobile = useMediaQuery({query: '(max-width:1024px)'}) 
   return (
     <section id="product-viewer">
       <h2>Take a Look Closer.</h2>
@@ -68,9 +67,8 @@ function ProductView() {
         id="canvas"
         camera={{ position: [0, 3, 5], fov: 50, near: 0.1, far: 100 }}
       >
-       
         <SpotLightSetup />
-        <ModelSwitcher scale={isMobile ? scale - 0.3 : scale} isMobile={isMobile}/>
+        <ModelSwitcher scale={isMobile ? scale - 0.03 : scale} isMobile={isMobile}/>
       </Canvas>
     </section>
   );

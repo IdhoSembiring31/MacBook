@@ -25,10 +25,12 @@ const fadeMeshes = (group, opacity) => {
 function ModelSwitcher({ scale, isMobile }) {
   const smallMacbookRef = useRef();
   const largeMacbookRef = useRef();
+  const SCALE_LARGE_DESKTOP= 0.08;
+  const SCALE_LARGE_MOBILE=0.05;
 
   
 
-  const ShowLargeBook = scale >= 0.08 || scale > 0.06;
+  const ShowLargeBook = scale === SCALE_LARGE_DESKTOP || scale === SCALE_LARGE_MOBILE;
   useGSAP(() => {
     if (ShowLargeBook) {
       moveGroup(smallMacbookRef.current, -OFFSET_DISTANCE);
