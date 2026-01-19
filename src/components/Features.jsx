@@ -74,6 +74,7 @@ const ModelScroll = () => {
     .call(()=>setTexture('/videos/fe.mp4'))
     .to('.box5',{opacity:1, y:0, })
   }, []);
+  
   return (
     <group ref={groupRef}>
       <Suspense
